@@ -27,7 +27,8 @@ class ProgramType extends AbstractType
                     ])
                 ],
             ])
-            ->add('description')
+            ->add('description', TextType::class, [
+                'label' => 'Program Description'])
             ->add('score', IntegerType::class)
             ->add('hints', EntityType::class, [
                 'class' => Hint::class,

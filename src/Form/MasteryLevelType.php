@@ -12,7 +12,8 @@ class MasteryLevelType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
+        ->add('title', TextType::class, [
+            'label' => 'MasteryLevel Title'])
             ->add('created_at')
             ->add('updated_at')
         ;

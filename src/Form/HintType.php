@@ -12,7 +12,8 @@ class HintType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('text')
+        ->add('text', TextType::class, [
+            'label' => 'Hint Text'])
             ->add('created_at')
             ->add('updated_at')
         ;

@@ -12,7 +12,8 @@ class PrerequisiteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('description')
+        ->add('description', TextType::class, [
+            'label' => 'Prerequisite Description'])
             ->add('created_at')
             ->add('updated_at')
             ->add('exercises')
